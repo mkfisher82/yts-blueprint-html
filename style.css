@@ -1,0 +1,291 @@
+body {
+  background-color: #bababa;
+  margin: 0; }
+
+.container {
+  display: grid;
+  grid-template-columns: auto; }
+
+header {
+  grid-column: 2;
+  grid-row: 1;
+  text-align: center;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center; }
+
+header #logo {
+  grid-column: 1;
+  grid-row: 1;
+  display: grid;
+  grid-auto-flow: row;
+  justify-items: left;
+  padding: 10px; }
+
+#logo * {
+  margin: 0;
+  padding: 0; }
+
+.dropdown {
+  justify-self: right;
+  display: block;
+  width: 100px;
+  height: 50px;
+  background-color: #666666;
+  color: white;
+  border-radius: 8px;
+  box-shadow: 2px 2px 5px grey; }
+
+header nav {
+  display: none; }
+
+header nav ul {
+  display: grid;
+  grid-auto-flow: column;
+  list-style: none;
+  grid-column-gap: 10px; }
+
+header nav a {
+  color: black; }
+
+#banner {
+  grid-row: 2;
+  grid-column: 2;
+  justify-self: center;
+  background-image: url("./banner.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  width: 100%;
+  height: auto;
+  position: relative; }
+
+#img-banner {
+  width: 100%;
+  height: auto; }
+
+#header-text {
+  color: black;
+  background-color: white;
+  padding: 20px;
+  position: absolute;
+  width: 200px;
+  height: 100px;
+  overflow: hidden;
+  top: calc(50% - 140px/2);
+  left: 50%; }
+
+.content {
+  grid-row: 3;
+  grid-column: 2;
+  grid-column-gap: 20px;
+  display: grid;
+  grid-template-columns: auto;
+  padding: 20px; }
+
+.primary {
+  display: grid;
+  grid-auto-flow: row;
+  grid-row-gap: 20px; }
+
+.primary > section {
+  background-color: white;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.35);
+  border: none; }
+
+.title {
+  text-align: center;
+  text-decoration: underline; }
+
+.preamble {
+  padding: 0 20px; }
+
+.row-grid {
+  display: grid;
+  grid-auto-flow: row; }
+
+.what-we-do .job-list {
+  margin: 0 0 20px 20px;
+  padding: 0 20px; }
+
+.features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  list-style: none;
+  margin: 0;
+  padding: 0; }
+
+.features > li {
+  padding: 10px; }
+
+.towns {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  justify-content: center;
+  padding: 10px; }
+
+.towns > li {
+  text-align: center;
+  font-size: 2rem;
+  list-style: none;
+  padding: 0 20px;
+  margin-bottom: 20px; }
+
+.who-we-are img {
+  justify-self: center;
+  padding: 20px;
+  width: 100%;
+  height: auto; }
+
+.sidebar {
+  background-color: white;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.35);
+  border: none;
+  padding: 20px; }
+
+input {
+  display: block; }
+
+footer {
+  grid-row: -1;
+  grid-column: 1/-1;
+  background-color: white;
+  justify-content: center;
+  display: grid;
+  grid-template-columns: 1fr 8fr 1fr;
+  display: none; }
+
+.footer-container {
+  grid-column: 2;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); }
+  .footer-container .social-nav {
+    justify-self: right; }
+  .footer-container .copyright {
+    justify-self: left; }
+  .footer-container .another-website {
+    justify-self: center; }
+
+/********  Media Queries based on Bottstrap 4 breakpoints **********/
+/* Small devices (landscape phones, 544px and up) */
+@media screen and (min-width: 544px) {
+  body {
+    background-color: #cf93db; } }
+/* Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpoint */
+@media screen and (min-width: 768px) {
+  body {
+    background-color: #93b6db; } }
+/* Large devices (desktops, 992px and up) */
+@media screen and (min-width: 992px) {
+  body {
+    background-color: #93dba5; } }
+/* Extra large devices (large desktops, 1200px and up) */
+@media screen and (min-width: 1200px) {
+  body {
+    background-color: #eb7c7c; }
+
+  .container {
+    display: grid;
+    grid-template-columns: 1fr 8fr 1fr;
+    grid-template-rows: auto auto auto; }
+
+  header {
+    grid-column: 2;
+    grid-row: 1;
+    text-align: center;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center; }
+
+  header #logo {
+    grid-column: 1;
+    grid-row: 1;
+    display: grid;
+    grid-auto-flow: row;
+    justify-items: left;
+    padding: 10px; }
+
+  .dropdown {
+    display: none; }
+
+  header nav {
+    display: contents;
+    grid-column: 3;
+    grid-row: 1;
+    padding: 10px; }
+
+  header nav ul {
+    display: grid;
+    grid-auto-flow: column;
+    grid-column-gap: 10px; }
+
+  #banner {
+    grid-row: 2;
+    grid-column: 2;
+    justify-self: center;
+    background-image: url("./banner.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    width: 100%;
+    position: relative; }
+
+  #header-text {
+    color: black;
+    background-color: white;
+    padding: 20px;
+    position: absolute;
+    width: 200px;
+    height: 100px;
+    overflow: hidden;
+    top: calc(50% - 140px/2);
+    left: 50%; }
+
+  .content {
+    grid-row: 3;
+    grid-column: 2;
+    grid-column-gap: 20px;
+    display: grid;
+    grid-template-columns: 3fr 1fr; }
+
+  .primary {
+    display: grid;
+    grid-auto-flow: row;
+    grid-row-gap: 20px; }
+
+  .row-grid {
+    display: grid;
+    grid-auto-flow: row; }
+
+  .features {
+    display: grid;
+    grid-template-columns: 1fr 1fr; }
+
+  .towns > li {
+    font-size: 2rem;
+    list-style: none;
+    padding: 0 20px;
+    margin-bottom: 20px; }
+
+  input {
+    display: block; }
+
+  footer {
+    grid-row: -1;
+    grid-column: 1/-1;
+    justify-content: center;
+    display: grid;
+    grid-template-columns: 1fr 8fr 1fr; }
+
+  .footer-container {
+    grid-column: 2;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); }
+    .footer-container .social-nav {
+      justify-self: right; }
+    .footer-container .copyright {
+      justify-self: left; }
+    .footer-container .another-website {
+      justify-self: center; } }
+
+/*# sourceMappingURL=style.css.map */
